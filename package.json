@@ -1,0 +1,16 @@
+{
+  "name": "internship-secure-integration-task3",
+  "version": "1.0.0",
+  "description": "EdVyro Full Stack Development Task 3 - Secure Application Integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0"
+  }
+}

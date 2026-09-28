@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Internship Board | Secure Application</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="/">ER <span>Internship Board</span></a><span>Task 3 · Secure Integration</span></div></header>
+
+<main class="wrap">
+<section class="hero">
+<p>FULL STACK DEVELOPMENT</p>
+<h1>Explore internships and apply securely.</h1>
+<p class="sub">Live records are loaded from the Express API. Try the filters and application form below.</p>
+</section>
+
+<section class="toolbar">
+<div>
+<label for="search">Search</label>
+<input id="search" type="search" placeholder="Search internships">
+</div>
+<div>
+<label for="domain">Domain</label>
+<select id="domain"><option value="">All domains</option></select>
+</div>
+<button id="reload" type="button">Reload</button>
+</section>
+
+<div id="loading" class="state">Loading internships…</div>
+<div id="failure" class="state error" hidden>Could not load internships. Check the API and try again.</div>
+<div id="empty" class="state" hidden>No internships match your filters.</div>
+<section id="cards" class="cards" aria-live="polite"></section>
+
+<section class="apply">
+<div>
+<p>APPLICATION</p><h2>Apply for an internship</h2>
+<p class="muted">Your application is validated in the browser and again on the server.</p>
+</div>
+<form id="applicationForm">
+<label for="internshipId">Internship</label>
+<select id="internshipId" required><option value="">Select an internship</option></select>
+
+<label for="name">Full name</label>
+<input id="name" required minlength="2" autocomplete="name">
+
+<label for="email">Email</label>
+<input id="email" type="email" required autocomplete="email">
+
+<label for="phone">Phone</label>
+<input id="phone" required autocomplete="tel" pattern="[0-9+()\-\s]{7,20}">
+
+<label for="coverLetter">Short cover letter</label>
+<textarea id="coverLetter" required minlength="20" rows="5" placeholder="Tell us why you are interested…"></textarea>
+
+<button class="submit" type="submit">Submit application</button>
+<p id="formMessage" role="status" aria-live="polite"></p>
+</form>
+</section>
+</main>
+
+<footer>Built by Eswar R · Secure Application Integration</footer>
+<script src="app.js"></script>
+</body>
+</html>
